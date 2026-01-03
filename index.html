@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamonagePro - Expert en sécurité incendie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --brand-orange: #F28C38;
+          --bg-warm: #e2e0dd;
+          --sidebar-dark: #1a1512;
+        }
+        
+        body { 
+          font-family: 'Inter', sans-serif;
+          background-color: var(--bg-warm);
+          color: #1f2937;
+          overflow-x: hidden;
+          margin: 0;
+        }
+
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif !important; }
+
+        input, select, textarea {
+          font-family: 'Inter', sans-serif !important;
+          border: 2px solid #cbd5e1 !important;
+          background-color: #ffffff !important;
+          padding: 0.85rem 1rem !important;
+          border-radius: 0.75rem !important;
+          font-size: 0.875rem !important;
+          font-weight: 500 !important;
+          color: #1e293b !important;
+          transition: all 0.2s ease;
+          width: 100%;
+        }
+
+        input:focus, select:focus, textarea:focus {
+          border-color: var(--brand-orange) !important;
+          outline: none;
+          box-shadow: 0 0 0 4px rgba(242, 140, 56, 0.15) !important;
+        }
+
+        .orange-gradient-btn {
+          background: linear-gradient(135deg, #F28C38 0%, #edab74 100%);
+          box-shadow: 0 4px 15px rgba(242, 140, 56, 0.3);
+        }
+
+        .admin-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.8);
+          border-radius: 2rem;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* OPTIMISATION IMPRESSION / TÉLÉCHARGEMENT PDF */
+        @media print {
+          @page { margin: 1.5cm; size: A4; }
+          body, html { background: white !important; margin: 0 !important; padding: 0 !important; width: 100% !important; height: auto !important; }
+          
+          /* Cacher tout sauf la couche d'impression active */
+          #root > div:not(.print-active-layer), 
+          aside, header, main, .no-print, .fixed:not(.print-active-layer) {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+
+          .print-active-layer {
+            position: static !important;
+            display: block !important;
+            visibility: visible !important;
+            background: white !important;
+            width: 100% !important;
+            height: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: auto !important;
+          }
+
+          .invoice-print-container {
+            width: 100% !important;
+            max-width: none !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: white !important;
+          }
+          
+          * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@7.1.1?deps=react@19.0.0,react-dom@19.0.0",
+    "recharts": "https://esm.sh/recharts@2.15.0?deps=react@19.0.0,react-dom@19.0.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.47.10",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
